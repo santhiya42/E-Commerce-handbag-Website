@@ -1,0 +1,39 @@
+.orderpage{
+background-color: White;
+width:500px;
+box-shadow: 0, 0 , 0,grey;
+}
+
+.orderpage img{
+ width: 200px;
+ height: 200px; 
+ object-fit: cover; 
+ margin: 20px 0; 
+ border-radius: 8px; 
+}
+.orderpage h2{
+  font-size: 14px;
+  color:black;
+}
+.orderpage p{
+  font-size: 16px;
+  color:blueviolet;
+}
+.orderpage button{
+  font-size: 10px;
+  background-color: pink;
+  color:black;
+  border-radius: 5px;
+  padding: 15px;
+  border:none;
+  cursor:pointer;
+}
+.orderpage button:hover{
+  color:skyblue;
+}
+.box1{
+  background-color:#f9f9f9;
+  padding:20px;
+  border-radius: 8px;
+  text-align: left;
+}

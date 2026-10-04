@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: lavender;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #6a4c93;
+}
+
+#cart-container {
+    width: 400px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #b8a9c9;
+    text-align: center;
+}
+
+#cart-container img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+#cart-container h2 {
+    margin: 15px 0;
+    color: #6a4c93;
+}
+
+#cart-container p {
+    margin: 10px;
+}
+
+#cart-container button {
+    padding: 10px 15px;
+    margin: 8px;
+    border: none;
+    border-radius: 8px;
+    background-color: #9370db;
+    color: white;
+    cursor: pointer;
+}

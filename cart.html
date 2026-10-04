@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Cart</title>
+  </head>
+   <link rel="stylesheet"  href="cart.css">
+  <body>
+    <h1>My Cart</h1>
+
+    <div id="cart-container"></div>
+
+    <script>
+      let name = localStorage.getItem("cartName");
+      let price = Number(localStorage.getItem("cartPrice"));
+      let image = localStorage.getItem("cartImage");
+
+      let quantity = 1;
+
+      function displayCart() {
+
+        let total = price * quantity;
+
+        localStorage.setItem("cartQuantity", quantity);
+
+        document.getElementById("cart-container").innerHTML = `
+          <img src="${image}" width="200">
+
+          <h2>${name}</h2>
+
+          <p>Price: $ ${price}</p>
+
+          <button onclick="decreaseQuantity()">-</button>
+
+          <span>${quantity}</span>
+
+          <button onclick="increaseQuantity()">+</button>
+
+          <p>Total: $ ${total}</p>
+
+          <button onclick="removeCart()">Remove</button>
+          
+          <button onclick="window.location.href='checkout.html'">
+          Checkout
+      </button>
+        `;
+      }
+
+      function increaseQuantity() {
+        quantity++;
+        displayCart();
+      }
+
+      function decreaseQuantity() {
+        if (quantity > 1) {
+          quantity--;
+          displayCart();
+        }
+      }
+
+      function removeCart() {
+        localStorage.removeItem("cartName");
+        localStorage.removeItem("cartPrice");
+        localStorage.removeItem("cartImage");
+        localStorage.removeItem("cartQuantity");
+
+        document.getElementById("cart-container").innerHTML =
+          "<h2>Your cart is empty</h2>";
+      }
+
+      displayCart();
+    </script>
+  </body>
+</html>

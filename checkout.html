@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CheckOut Page</title>
+  </head>
+  <link rel="stylesheet" href="checkout.css">
+  <body>
+    <h1>CheckOut</h1>
+    <div class="checkout-container">
+      <h2>Customer Details</h2>
+      <input type="text" placeholder="Enter your Name">
+      <input type="Email" placeholder="Enter your Email">
+      <input type="number" placeholder="Enter your Phone Number">
+      <textarea placeholder="Enter your Address"></textarea>
+   <select id="payment-method">
+    <option>Select Payment Method</option>
+    <option>Cash on delivery</option>
+    <option>UPI</option>
+    <option>credit Card</option>
+  </select>
+    <button onclick="placeorder()">Placeorder</button>
+    <button onclick="window.location.href='cart.html'">Back to cart</button>
+    </div>
+    <script src="checkout.js"></script>
+  </body>
+</html>
